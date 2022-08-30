@@ -1,3 +1,4 @@
 # Portfolio
 
-Projeto de um portfolio somente em HTML
+- Trabalho individual
+- Feito com HTML e CSS
