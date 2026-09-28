@@ -2,6 +2,8 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { MouseEvent } from "react";
 
 interface NavLink {
   href: string;
@@ -22,10 +24,19 @@ interface HeaderProps {
 }
 
 export function Header({ navLinks, activePath, cta, showAvatar }: HeaderProps) {
+  const pathname = usePathname();
+
+  const handleSamePageClick = (event: MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href !== pathname) return;
+    event.preventDefault();
+    window.history.replaceState(null, "", href);
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
+
   return (
     <header className="fixed inset-x-0 top-0 z-50 border-b border-black/5 bg-[#f5f3f1]/90 backdrop-blur-xl">
       <div className="mx-auto flex max-w-[1200px] items-center justify-between px-6 py-4">
-        <Link href="/" className="flex items-center gap-3">
+        <Link href="/" onClick={(event) => handleSamePageClick(event, "/")} className="flex items-center gap-3">
           <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-black/5 text-xl font-semibold text-[#2d2d2d]">
             AM
           </div>
@@ -41,7 +52,12 @@ export function Header({ navLinks, activePath, cta, showAvatar }: HeaderProps) {
                 {link.label}
               </a>
             ) : (
-              <Link key={link.href} href={link.href} className={className}>
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={(event) => handleSamePageClick(event, link.href)}
+                className={className}
+              >
                 {link.label}
               </Link>
             );
