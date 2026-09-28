@@ -203,7 +203,16 @@ export const HOW_I_CAN_HELP: ServiceItem[] = [
 
 export const CURRENTLY_BUILDING: BuildingItem[] = [
   {
-    name: "Memory Stamp",
+    name: "ARC Journal",
+    description:
+      "A cozy reading journal for ARC reviewers to track Advanced Reader Copies, including deadlines, reviews, platforms, and notes, with a free account and secure cloud sync.",
+    status: "Active",
+    category: "Web App",
+    tags: ["Next.js", "TypeScript", "Supabase"],
+    href: "https://arcjournal.site/",
+  },
+  {
+    name: "Polarim",
     description:
       "A mobile app designed to help people preserve memories, stories, and meaningful moments across generations. Focused on emotional UX and gentle interaction design.",
     status: "In Development",

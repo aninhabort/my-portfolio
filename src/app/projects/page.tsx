@@ -91,7 +91,7 @@ export default function ProjectsPage() {
             Let&apos;s <span className="text-[#1a1a1a]">Collaborate</span>
           </h2>
           <p className="mt-3 max-w-2xl text-base text-[#6b6b6b]">
-            Looking for a Product Designer who understands the full product lifecycle? I&apos;d love to hear about your project.
+            Looking for a Frontend Developer who understands the full product lifecycle? I&apos;d love to hear about your project.
           </p>
           <div className="mt-6 flex flex-wrap gap-4">
             <Link

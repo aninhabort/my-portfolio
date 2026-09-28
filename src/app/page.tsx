@@ -90,7 +90,7 @@ export default function Page() {
             </span>
             <div>
               <p className="text-sm uppercase tracking-[0.6em] text-[#6b6b6b]">
-                Product Designer & Content Creator
+                Frontend Developer & Content Creator
               </p>
               <h1 className="mt-4 text-5xl font-bold leading-tight text-[#2d2d2d] sm:text-6xl">
                 Ana Carolina <span className="text-[#1a1a1a]">Magalhães</span>
@@ -305,7 +305,7 @@ export default function Page() {
               Start a Conversation
             </h2>
             <p className="text-[#6b6b6b]">
-              Have a product to design or a collaboration in mind? Drop me a message and let&apos;s build something extraordinary.
+              Have an interface to bring to life or a collaboration in mind? Drop me a message and let&apos;s build something extraordinary together.
             </p>
             <div className="space-y-4">
               <div className="flex items-start gap-3">
